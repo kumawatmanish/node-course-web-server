@@ -1,6 +1,8 @@
 const express = require('express');
 
 const hbs = require('hbs');
+
+const port = process.env.PORT || 8888;
 var app = express();
 
 app.set('view engine', 'hbs');
@@ -28,6 +30,6 @@ app.get('/about',(req,res) => {
     });
 });
 
-app.listen(8888,() => {
-    console.log('Server is up on 8888 port');
+app.listen(port,() => {
+    console.log(`Server is upon ${port}`);
 });
